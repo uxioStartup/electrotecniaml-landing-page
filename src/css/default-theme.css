@@ -81,7 +81,8 @@
 .shop-page .prod-tabs .add-review .rating .rate-box:focus,
 .shop-page .prod-tabs .add-review .rating .rate-box:active,
 .cart-table tbody tr .remove-btn,
-.checkout-page .default-links li a,.video-section .title,
+.checkout-page .default-links li a,
+.video-section .title,
 .sec-title-two .title,
 .social-icon-two li a:hover,
 .news-widget .more-news:hover,
@@ -135,17 +136,19 @@
 .testimonial-block-seven .inner-box .lower-content h4,
 .testimonial-block-seven .inner-box .upper-content .rating .fa,
 .service-block-six .inner-box .read-more:hover,
-.portfolio-section-three .filter-tabs li.active, .portfolio-section-three .filter-tabs li:hover,
-.portfolio-section-two .filter-tabs li.active, .portfolio-section-two .filter-tabs li:hover,
+.portfolio-section-three .filter-tabs li.active,
+.portfolio-section-three .filter-tabs li:hover,
+.portfolio-section-two .filter-tabs li.active,
+.portfolio-section-two .filter-tabs li:hover,
 .news-blog-three .inner-box .lower-content h4 a:hover,
 .footer-style-three .footer-widget .info-list li .icon,
-.news-blog-three .inner-box .lower-content .comments:hover{
-	color:#f05523;
+.news-blog-three .inner-box .lower-content .comments:hover {
+  color: #f05523;
 }
 
 .main-menu .navigation > li > ul > li > ul > li:hover > a::before,
-.main-menu .navigation > li > ul > li:hover > a::before{
-	text-shadow:8px 0 #f05523, -8px 0 #f05523;
+.main-menu .navigation > li > ul > li:hover > a::before {
+  text-shadow: 8px 0 #f05523, -8px 0 #f05523;
 }
 
 /*Background Color*/
@@ -223,7 +226,11 @@
 .single-product-item .title-holder:before,
 .styled-form .account-btn:hover,
 .styled-form .form-group .radio-box label:before,
-.styled-form .form-group .check-box input[type="checkbox"]:checked + label:before,
+.styled-form
+  .form-group
+  .check-box
+  input[type="checkbox"]:checked
+  + label:before,
 .about-section-two .images-column .image-two .play-box .play-button,
 .main-header.header-style-three .header-lower .inner-container,
 .service-detail .service-tabs .tab-btns .tab-btn:hover,
@@ -233,7 +240,6 @@
 .project-challenge-section .inner-container:before,
 .news-block-four .inner-box:hover .read-more,
 .project-mission-section .new-posts a:hover,
-
 .updated-header-top,
 .call-to-action-three,
 .updated-btn-style-two,
@@ -256,7 +262,7 @@
 .circular-menu-three.active .floating-btn,
 .circular-menu-three .menu-item:hover span,
 .about-section-four .image-column:before,
-.testimonial-section-four .owl-prev, 
+.testimonial-section-four .owl-prev,
 .testimonial-section-four .owl-next,
 .portfolio-block .overlay-box .inner .icon:hover,
 .team-block-three .image-box .overlay-box .lower-content,
@@ -280,7 +286,8 @@
 .featured-block-three .inner-box:hover .icon-box .inner-icon-box,
 .skills-two .skill-item .skill-bar .bar-inner .bar:before,
 .news-blog-two .inner-box .lower-content .post-meta:before,
-.team-section-four .owl-prev, .team-section-four .owl-next,
+.team-section-four .owl-prev,
+.team-section-four .owl-next,
 .header-style-four .updated-header-top .language .dropdown-menu > li > a:hover,
 .testimonial-block-five .inner-box .upper-box .quote-icon,
 .news-blog-three .inner-box .image a:before,
@@ -293,37 +300,47 @@
 .news-blog-four .inner-box .lower-content .outer-link .date,
 .service-block-six .inner-box .read-more:after,
 .fluid-section-two .content-column .blocks-outer .year-block .block-inner .year,
-.traveler-team-section .owl-dots .owl-dot:hover, .traveler-team-section .owl-dots .owl-dot.active,
-.testimonial-section-five .owl-prev, .testimonial-section-five .owl-next,
-.testimonial-section-five .owl-dots .owl-dot:hover, .testimonial-section-five .owl-dots .owl-dot.active,
-.traveler-team-section .owl-prev, .traveler-team-section .owl-next,
-.newsletter-widget .form-group input[type="submit"], .newsletter-widget .form-group .subscribe-btn,
-.testimonial-section-six .owl-nav .owl-prev:hover, .testimonial-section-six .owl-nav .owl-next:hover,
-.team-section-four .owl-dots .owl-dot:hover, .team-section-four .owl-dots .owl-dot.active,
-.main-slider-five .swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
-.main-slider-five .swiper-button-next:hover, .main-slider-five .swiper-button-prev:hover,
-.main-slider-six .swiper-button-next:hover, .main-slider-six .swiper-button-prev:hover{
-	background-color:#f05523;
+.traveler-team-section .owl-dots .owl-dot:hover,
+.traveler-team-section .owl-dots .owl-dot.active,
+.testimonial-section-five .owl-prev,
+.testimonial-section-five .owl-next,
+.testimonial-section-five .owl-dots .owl-dot:hover,
+.testimonial-section-five .owl-dots .owl-dot.active,
+.traveler-team-section .owl-prev,
+.traveler-team-section .owl-next,
+.newsletter-widget .form-group input[type="submit"],
+.newsletter-widget .form-group .subscribe-btn,
+.testimonial-section-six .owl-nav .owl-prev:hover,
+.testimonial-section-six .owl-nav .owl-next:hover,
+.team-section-four .owl-dots .owl-dot:hover,
+.team-section-four .owl-dots .owl-dot.active,
+.main-slider-five
+  .swiper-pagination-progressbar
+  .swiper-pagination-progressbar-fill,
+.main-slider-five .swiper-button-next:hover,
+.main-slider-five .swiper-button-prev:hover,
+.main-slider-six .swiper-button-next:hover,
+.main-slider-six .swiper-button-prev:hover {
+  background-color: #f05523;
 }
-
 
 .team-block-five .inner-box .image-box .overlay-box .inner,
 .gallery-block .inner-box .image-box .overlay-box,
-.about-section .image-column .experiance-box .box-inner{
-	background-color:rgba(240,85,35,0.90);
+.about-section .image-column .experiance-box .box-inner {
+  background-color: rgba(240, 85, 35, 0.9);
 }
 
-.price-block .inner-box:before{
-	background: -webkit-linear-gradient(to top, #060504 0%, #f05523 100%);
-	background: -moz-linear-gradient(to top, #060504 0%, #f05523 100%);
-	background: linear-gradient(to top, #060504 0%, #f05523 100%);
+.price-block .inner-box:before {
+  background: -webkit-linear-gradient(to top, #060504 0%, #f05523 100%);
+  background: -moz-linear-gradient(to top, #060504 0%, #f05523 100%);
+  background: linear-gradient(to top, #060504 0%, #f05523 100%);
 }
 
-.cta-section-three .inner-container{
-	background: #f05523;
-	background: -webkit-linear-gradient(to top, #f05523 0%, #232222 100%);
-	background: -moz-linear-gradient(to top, #f05523 0%, #232222 100%);
-	background: linear-gradient(to top, #f05523 0%, #232222 100%);
+.cta-section-three .inner-container {
+  background: #f05523;
+  background: -webkit-linear-gradient(to top, #f05523 0%, #232222 100%);
+  background: -moz-linear-gradient(to top, #f05523 0%, #232222 100%);
+  background: linear-gradient(to top, #f05523 0%, #232222 100%);
 }
 
 .request-quote-section .content-box .play-box .ripple,
@@ -331,21 +348,21 @@
 .request-quote-section .content-box .play-box .ripple:after,
 .goal-section .image-column .image .icon-button .ripple,
 .goal-section .image-column .image .icon-button .ripple:before,
-.goal-section .image-column .image .icon-button .ripple:after{
-	-webkit-box-shadow: 0 0 0 0 rgba(240,85,35,0.90);
-    -moz-box-shadow: 0 0 0 0 rgba(240,85,35,0.90);
-    -ms-box-shadow: 0 0 0 0 rgba(240,85,35,0.90);
-    -o-box-shadow: 0 0 0 0 rgba(240,85,35,0.90);
-    box-shadow: 0 0 0 0 rgba(240,85,35,0.90);
+.goal-section .image-column .image .icon-button .ripple:after {
+  -webkit-box-shadow: 0 0 0 0 rgba(240, 85, 35, 0.9);
+  -moz-box-shadow: 0 0 0 0 rgba(240, 85, 35, 0.9);
+  -ms-box-shadow: 0 0 0 0 rgba(240, 85, 35, 0.9);
+  -o-box-shadow: 0 0 0 0 rgba(240, 85, 35, 0.9);
+  box-shadow: 0 0 0 0 rgba(240, 85, 35, 0.9);
 }
 
 .skills .skill-item .skill-bar .bar-inner .bar,
-.back-to-top::after{
-	border-bottom-color:#f05523;
+.back-to-top::after {
+  border-bottom-color: #f05523;
 }
 
-.service-detail .service-tabs .tab-btns .tab-btn:before{
-	border-top-color:#f05523;
+.service-detail .service-tabs .tab-btns .tab-btn:before {
+  border-top-color: #f05523;
 }
 
 /*Border Color*/
@@ -417,12 +434,21 @@
 .news-blog-four .inner-box .lower-content,
 .team-block-six .inner-box:hover .image,
 .testimonial-block-seven .inner-box .upper-content,
-.fluid-section-two .content-column .blocks-outer .year-block .block-inner .year:before,
-.main-slider-six .swiper-button-next:hover, .main-slider-six .swiper-button-prev:hover,
-.testimonial-section-six .owl-nav .owl-prev:hover, .testimonial-section-six .owl-nav .owl-next:hover,
-.portfolio-section-two .filter-tabs li.active, .portfolio-section-two .filter-tabs li:hover,
-.main-slider-five .swiper-button-next:hover, .main-slider-five .swiper-button-prev:hover{
-	border-color:#f05523;
+.fluid-section-two
+  .content-column
+  .blocks-outer
+  .year-block
+  .block-inner
+  .year:before,
+.main-slider-six .swiper-button-next:hover,
+.main-slider-six .swiper-button-prev:hover,
+.testimonial-section-six .owl-nav .owl-prev:hover,
+.testimonial-section-six .owl-nav .owl-next:hover,
+.portfolio-section-two .filter-tabs li.active,
+.portfolio-section-two .filter-tabs li:hover,
+.main-slider-five .swiper-button-next:hover,
+.main-slider-five .swiper-button-prev:hover {
+  border-color: #f05523;
 }
 
 .header-top,
@@ -458,7 +484,7 @@
 .woocommerce input.button.disabled:hover,
 .woocommerce input.button:disabled:hover,
 .woocommerce input.button[disabled]:disabled:hover {
-	background-color:#f05523;
+  background-color: #f05523;
 }
 
 .woocommerce .our-shop .star-rating span,
@@ -478,7 +504,7 @@
 .woocommerce .our-shop .star-rating:before,
 .woocommerce .our-shop div.product .price,
 .woocommerce .product-details div.product .price {
-	color:#f05523;
+  color: #f05523;
 }
 
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
@@ -487,9 +513,9 @@
 .woocommerce .woocommerce-message,
 .woocommerce .shop_table tbody tr a.remove:hover,
 .woocommerce .woocommerce-MyAccount-navigation ul li a:hover {
-	border-color: #f05523;
+  border-color: #f05523;
 }
 
 .woocommerce .woocommerce-message {
-	border-top-color: #f05523;
+  border-top-color: #f05523;
 }

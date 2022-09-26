@@ -4,6 +4,14 @@
  * See: https://www.gatsbyjs.com/docs/ssr-apis/
  */
 
-exports.onRenderBody = ({ setHtmlAttributes }) => {
+const React = require("react")
+
+exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
   setHtmlAttributes({ lang: `en` })
+  setHeadComponents([
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      crossOrigin="anonymous"
+    ></script>,
+  ])
 }

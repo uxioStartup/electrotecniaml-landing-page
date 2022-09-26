@@ -1,160 +1,132 @@
-import React, { useState, useEffect } from "react"
+import * as React from "react"
 import Layout from "../components/layout"
 
 import "./../css/index.css"
 
-import $ from "jquery"
-import OwlCarousel from "react-owl-carousel"
-
-import "../components/script"
 import "jquery-migrate"
 
-const IndexPage = () => {
-  useEffect(() => {
-    //Main Slider Carousel
-    if ($(".main-slider-carousel").length) {
-      console.log("entering carousel")
-      $(".main-slider-carousel").owlCarousel({
-        animateOut: "fadeOut",
-        animateIn: "fadeIn",
-        // loop: true,
-        margin: 0,
-        nav: true,
-        autoHeight: true,
-        smartSpeed: 500,
-        autoplay: 6000,
-        navText: [
-          '<span class="fa fa-angle-left"></span>',
-          '<span class="fa fa-angle-right"></span>',
-        ],
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 1,
-          },
-          800: {
-            items: 1,
-          },
-          1024: {
-            items: 1,
-          },
-          1200: {
-            items: 1,
-          },
-        },
-      })
-    }
-  })
+import "../components/script"
 
-  return (
-    <Layout>
-      {/* <link rel="alternate" type="application/rss+xml" title="Montro &raquo; Feed" href="https://themerange.net/wp/montro/feed/" />
+const ServicesPage = () => (
+  <Layout>
+    {/* <link rel="alternate" type="application/rss+xml" title="Montro &raquo; Feed" href="https://themerange.net/wp/montro/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Montro &raquo; Comments Feed" href="https://themerange.net/wp/montro/comments/feed/" />
  */}
 
-      {/* 
+    {/* 
 <link rel='shortlink' href='https://themerange.net/wp/montro/' /> */}
-      {/* <link rel="alternate" type="application/json+oembed" href="https://themerange.net/wp/montro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthemerange.net%2Fwp%2Fmontro%2F" />
+    {/* <link rel="alternate" type="application/json+oembed" href="https://themerange.net/wp/montro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthemerange.net%2Fwp%2Fmontro%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://themerange.net/wp/montro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthemerange.net%2Fwp%2Fmontro%2F&#038;format=xml" /> */}
-      {/* <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript> */}
+    {/* <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript> */}
 
-      {/* <html lang="en-US" className="no-js no-svg"> */}
+    {/* <html lang="en-US" className="no-js no-svg"> */}
 
-      {/* <body className="home page-template page-template-tpl-default-elementor page-template-tpl-default-elementor-php page page-id-1926 wp-embed-responsive theme-montro woocommerce-no-js menu-layer elementor-default elementor-kit-9 elementor-page elementor-page-1926">  */}
+    {/* <body className="home page-template page-template-tpl-default-elementor page-template-tpl-default-elementor-php page page-id-1926 wp-embed-responsive theme-montro woocommerce-no-js menu-layer elementor-default elementor-kit-9 elementor-page elementor-page-1926">  */}
 
-      {/* /*HEADER*/}
+    {/* /*HEADER*/}
 
-      <div
-        data-elementor-type="wp-page"
-        data-elementor-id="1926"
-        className="elementor elementor-1926"
+    <div
+      data-elementor-type="wp-page"
+      data-elementor-id="1926"
+      className="elementor elementor-1926"
+    >
+      <section
+        className="elementor-section elementor-top-section elementor-element elementor-element-7fc13e4 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+        data-id="7fc13e4"
+        data-element_type="section"
       >
-        <section
-          className="elementor-section elementor-top-section elementor-element elementor-element-7fc13e4 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-          data-id="7fc13e4"
-          data-element_type="section"
-        >
-          <div className="elementor-container elementor-column-gap-default">
-            <div
-              className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b664c1e"
-              data-id="b664c1e"
-              data-element_type="column"
-            >
-              <div className="elementor-widget-wrap elementor-element-populated">
-                <div
-                  className="elementor-element elementor-element-998c626 elementor-widget elementor-widget-montro_slider_v1"
-                  // data-id="998c626"
-                  // data-element_type="widget"
-                  // data-widget_type="montro_slider_v1.default"
-                >
-                  <div className="elementor-widget-container">
-                    {/* <!-- Main Slider Section --> */}
-                    <section className="main-slider">
-                      <div className="main-slider-carousel ">
-                        <div
-                          className="slide slide-tonmix"
-                          style={{ backgroundColor: "red" }}
-                        >
-                          <div className="auto-container">
-                            <div className="row clearfix">
-                              {/* <!-- Content Column --> */}
-                              <div className="content-column col-lg-7 cl-md-12 col-sm-12">
-                                <div className="inner-column">
-                                  <div className="title">
-                                    Genral Contracting
+        <div className="elementor-container elementor-column-gap-default">
+          <div
+            className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b664c1e"
+            data-id="b664c1e"
+            data-element_type="column"
+          >
+            <div className="elementor-widget-wrap elementor-element-populated">
+              <div
+                className="elementor-element elementor-element-998c626 elementor-widget elementor-widget-montro_slider_v1"
+                data-id="998c626"
+                data-element_type="widget"
+                data-widget_type="montro_slider_v1.default"
+              >
+                <div className="elementor-widget-container">
+                  {/* <!-- Main Slider Section --> */}
+                  <section className="main-slider">
+                    <div className="main-slider-carousel  owl-theme">
+                      <div
+                        className="slide"
+                        style={{
+                          backgroundImage:
+                            "url(https://themerange.net/wp/montro/wp-content/uploads/2022/05/image-1.jpg)",
+                        }}
+                      >
+                        <div className="auto-container">
+                          <div className="row clearfix">
+                            {/* <!-- Content Column --> */}
+                            <div className="content-column col-lg-7 cl-md-12 col-sm-12">
+                              <div className="inner-column">
+                                <div className="title">Genral Contracting</div>
+                                <h1>
+                                  Build Everything <br /> You Needs
+                                </h1>
+                                <div className="text">
+                                  Build a Better Way Delivering Projects in Ways{" "}
+                                  <br /> that Can't be Duplicated
+                                </div>
+                                <div className="clearfix">
+                                  <div className="btns-box">
+                                    <a
+                                      href="https://themerange.net/wp/montro/about-us/"
+                                      className="btn-style-three theme-btn"
+                                    >
+                                      <span className="txt">Read More</span>
+                                    </a>
                                   </div>
-                                  <h1>
-                                    Build Everything <br /> You Needs
-                                  </h1>
-                                  <div className="text">
-                                    Build a Better Way Delivering Projects in
-                                    Ways <br /> that Can't be Duplicated
-                                  </div>
-                                  <div className="clearfix">
-                                    <div className="btns-box">
-                                      <a
-                                        href="https://themerange.net/wp/montro/about-us/"
-                                        className="btn-style-three theme-btn"
-                                      >
-                                        <span className="txt">Read More</span>
-                                      </a>
-                                    </div>
 
-                                    <div className="play-box">
-                                      <a
-                                        href="https://www.youtube.com/watch?v=kxPCFljwJws"
-                                        className="lightbox-video play-button"
-                                      >
-                                        <span className="flaticon-play-arrow">
-                                          <i className="ripple"></i>
-                                        </span>
-                                      </a>
-                                      See Our Achivity{" "}
-                                    </div>
+                                  <div className="play-box">
+                                    <a
+                                      href="https://www.youtube.com/watch?v=kxPCFljwJws"
+                                      className="lightbox-video play-button"
+                                    >
+                                      <span className="flaticon-play-arrow">
+                                        <i className="ripple"></i>
+                                      </span>
+                                    </a>
+                                    See Our Achivity{" "}
                                   </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* <!-- Image Column --> */}
+                            <div className="image-column col-lg-5 cl-md-12 col-sm-12">
+                              <div className="inner-column">
+                                <div className="image">
+                                  <img
+                                    src="https://themerange.net/wp/montro/wp-content/uploads/2022/05/content-image-1.png"
+                                    alt="Awesome Image1"
+                                  />
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </section>
-                    {/* <!-- End Main Slider Section --> */}
-                  </div>
+                    </div>
+                  </section>
+                  {/* <!-- End Main Slider Section --> */}
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+    </div>
 
-      <div className="clearfix"></div>
+    <div className="clearfix"></div>
 
-      {/* <!-- Main Footer --> */}
+    {/* <!-- Main Footer --> */}
 
-      {/* (function() {function maybePrefixUrlField() {
+    {/* (function() {function maybePrefixUrlField() {
 	if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
 		this.value = "http://" + this.value;
 	}
@@ -172,7 +144,7 @@ if (urlFields) {
 			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
 			document.body.className = c;
 		})(); */}
-      {/* <script type='text/javascript' src='https://themerange.net/wp/montro/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+    {/* <script type='text/javascript' src='https://themerange.net/wp/montro/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
 <script type='text/javascript' src='https://themerange.net/wp/montro/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
 <script type='text/javascript' id='contact-form-7-js-extra'>
 
@@ -215,10 +187,9 @@ if (urlFields) {
 <script type='text/javascript' id='elementor-frontend-js-before'>
 </script>
 <script type='text/javascript' src='https://themerange.net/wp/montro/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.6.6' id='elementor-frontend-js'></script> */}
-      {/* </body> */}
-      {/* </html> */}
-    </Layout>
-  )
-}
+    {/* </body> */}
+    {/* </html> */}
+  </Layout>
+)
 
-export default IndexPage
+export default ServicesPage
