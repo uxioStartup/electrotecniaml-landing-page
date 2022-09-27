@@ -1,11 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
 
-import "./../css/index.css"
-
-import "jquery-migrate"
-
-import "../components/script"
 import PageTitle from "../components/PageTitle"
 
 import ServiceDetails from "../components/ServiceDetails"

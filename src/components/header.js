@@ -25,8 +25,9 @@ const Header = ({ siteTitle }) => {
   ]
 
   const item_menu = [
-    { name: "Inicio", href: "/" },
+    { key: 1, name: "Inicio", href: "/" },
     {
+      key: 2,
       name: "Productos",
       href: "productos",
       subitems: [
@@ -36,6 +37,7 @@ const Header = ({ siteTitle }) => {
       ],
     },
     {
+      key: 3,
       name: "Servicios",
       href: "servicios",
       subitems: [
@@ -44,7 +46,7 @@ const Header = ({ siteTitle }) => {
         { name: "Atención personalizada" },
       ],
     },
-    { name: "Contacto", href: "contacto" },
+    { key: 4, name: "Contacto", href: "contacto" },
   ]
 
   useEffect(() => {

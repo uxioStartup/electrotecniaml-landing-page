@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const ServiceDetails = ({}) => (
+const ServiceDetails = () => (
   <>
     {/* <!-- Sidebar Page Container --> */}
     <div className="sidebar-page-container">

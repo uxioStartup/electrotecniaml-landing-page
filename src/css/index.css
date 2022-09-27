@@ -2,6 +2,10 @@
   background-image: url("../images/tonmix/2.jpeg");
 }
 
+.pattern-18 {
+  background-image: url("../images/content/pattern-18.png");
+}
+
 img.wp-smiley,
 img.emoji {
   display: inline !important;
