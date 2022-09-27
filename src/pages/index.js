@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
-
-import "./../css/index.css"
 
 import $ from "jquery"
 import OwlCarousel from "react-owl-carousel"
-
-import "../components/script"
-import "jquery-migrate"
 
 const IndexPage = () => {
   useEffect(() => {
@@ -66,29 +61,18 @@ const IndexPage = () => {
 
       {/* /*HEADER*/}
 
-      <div
-        data-elementor-type="wp-page"
-        data-elementor-id="1926"
-        className="elementor elementor-1926"
-      >
+      <div data-elementor-type="wp-page" className="elementor elementor-1926">
         <section
-          className="elementor-section elementor-top-section elementor-element elementor-element-7fc13e4 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-          data-id="7fc13e4"
+          className="elementor-section elementor-top-section elementor-element  elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-element_type="section"
         >
           <div className="elementor-container elementor-column-gap-default">
             <div
-              className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b664c1e"
-              data-id="b664c1e"
+              className="elementor-column elementor-col-100 elementor-top-column elementor-element"
               data-element_type="column"
             >
               <div className="elementor-widget-wrap elementor-element-populated">
-                <div
-                  className="elementor-element elementor-element-998c626 elementor-widget elementor-widget-montro_slider_v1"
-                  // data-id="998c626"
-                  // data-element_type="widget"
-                  // data-widget_type="montro_slider_v1.default"
-                >
+                <div className="elementor-element  elementor-widget elementor-widget-montro_slider_v1">
                   <div className="elementor-widget-container">
                     {/* <!-- Main Slider Section --> */}
                     <section className="main-slider">

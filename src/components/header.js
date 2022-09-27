@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import $ from "jquery"
+import CallToActionBtn from "./CallToActionBtn"
 
 const Header = ({ siteTitle }) => {
   const data = [
@@ -24,9 +25,10 @@ const Header = ({ siteTitle }) => {
   ]
 
   const item_menu = [
-    { name: "Inicio" },
+    { name: "Inicio", href: "/" },
     {
       name: "Productos",
+      href: "productos",
       subitems: [
         { name: "Hormigón elaborado" },
         { name: "Áridos" },
@@ -35,13 +37,14 @@ const Header = ({ siteTitle }) => {
     },
     {
       name: "Servicios",
+      href: "servicios",
       subitems: [
         { name: "Servicio de bombeo" },
         { name: "Asesoramiento online" },
         { name: "Atención personalizada" },
       ],
     },
-    { name: "Contacto" },
+    { name: "Contacto", href: "contacto" },
   ]
 
   useEffect(() => {
@@ -123,7 +126,7 @@ const Header = ({ siteTitle }) => {
             <div className="pull-right upper-right clearfix">
               {data.map((item, i) => {
                 return (
-                  <div className="upper-column info-box">
+                  <div className="upper-column info-box" key={i}>
                     <div className="icon-box">
                       <span className={item.icon}></span>
                     </div>
@@ -178,7 +181,9 @@ const Header = ({ siteTitle }) => {
                   <ul className="navigation clearfix">
                     {item_menu.map((item, i) => {
                       let submenu = ""
-                      let inputProps = {}
+                      let inputProps = {
+                        href: item.href,
+                      }
                       let classes =
                         "menu-item menu-item-type-custom menu-item-object-custom"
                       if (item.hasOwnProperty("subitems")) {
@@ -210,8 +215,8 @@ const Header = ({ siteTitle }) => {
                         )
                       }
                       return (
-                        <li className={classes}>
-                          <a title={item.name} href="#" {...inputProps}>
+                        <li className={classes} key={item.name}>
+                          <a title={item.name} {...inputProps}>
                             {item.name}
                           </a>
                           {submenu}
@@ -223,17 +228,7 @@ const Header = ({ siteTitle }) => {
               </nav>
               {/* <!-- Main Menu End--> */}
 
-              {/* <!-- Options Box --> */}
-              <div className="options-box clearfix">
-                <div className="btn-box">
-                  <a
-                    href="https://themerange.net/wp/montro/contact-us-01/"
-                    className="theme-btn btn-style-one"
-                  >
-                    <span className="txt">Get A Quote</span>
-                  </a>
-                </div>
-              </div>
+              <CallToActionBtn />
             </div>
           </div>
         </div>

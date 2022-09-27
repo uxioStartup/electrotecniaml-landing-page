@@ -5,15 +5,18 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useState, useEffect } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import "./../css/index.css"
 import Footer from "./footer"
+import BackToTop from "./BackToTop"
 
-import $ from "jquery"
+import "../components/script"
+import "jquery-migrate"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,22 +29,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  useEffect(() => {
-    // Scroll to a Specific Div
-    if ($(".scroll-to-target").length) {
-      $(".scroll-to-target").on("click", function () {
-        var target = $(this).attr("data-target")
-        // animate
-        $("html, body").animate(
-          {
-            scrollTop: $(target).offset().top,
-          },
-          1500
-        )
-      })
-    }
-  })
-
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
@@ -53,13 +40,7 @@ const Layout = ({ children }) => {
         {/* <!-- End Page Wrapper --> */}
       </div>
 
-      {/* <!--Scroll to top--> */}
-      <div
-        className="back-to-top scroll-to-target show-back-to-top"
-        data-target="html"
-      >
-        TOP
-      </div>
+      <BackToTop />
     </>
   )
 }
