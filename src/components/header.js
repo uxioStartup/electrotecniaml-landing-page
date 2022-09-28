@@ -1,53 +1,33 @@
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import $ from "jquery"
 import CallToActionBtn from "./CallToActionBtn"
 
-const Header = ({ siteTitle }) => {
-  const data = [
-    {
-      icon: "flaticon-phone",
-      description: "Requesting a Call:",
-      data: <a href="tel:">(301) 357 1234</a>,
-    },
-    {
-      icon: "flaticon-clock-1",
-      description: "Sunday - Friday:",
-      data: "9am - 8pm",
-    },
-    {
-      icon: "flaticon-location-1",
-      description: "1428 Callison Laney Building",
-      data: "California",
-    },
-  ]
-
-  const item_menu = [
-    { key: 1, name: "Inicio", href: "/" },
-    {
-      key: 2,
-      name: "Productos",
-      href: "productos",
-      subitems: [
-        { name: "Hormigón elaborado" },
-        { name: "Áridos" },
-        { name: 'Planta móvil de elaboración "On Site"' },
-      ],
-    },
-    {
-      key: 3,
-      name: "Servicios",
-      href: "servicios",
-      subitems: [
-        { name: "Servicio de bombeo" },
-        { name: "Asesoramiento online" },
-        { name: "Atención personalizada" },
-      ],
-    },
-    { key: 4, name: "Contacto", href: "contacto" },
-  ]
+const Header = ({}) => {
+  let data = useStaticQuery(graphql`
+    query {
+      allHeaderContactInformationJson {
+        nodes {
+          data
+          description
+          icon
+        }
+      }
+      allHeaderMenuJson {
+        nodes {
+          href
+          name
+          subitems {
+            name
+          }
+        }
+      }
+    }
+  `)
 
   useEffect(() => {
     //Mobile Nav Hide Show
@@ -115,9 +95,9 @@ const Header = ({ siteTitle }) => {
             {/* <!-- Logo Box --> */}
             <div className="pull-left logo-box">
               <div className="logo">
-                <a href="https://themerange.net/wp/montro/" title="Montro">
-                  <img
-                    src="https://themerange.net/wp/montro/wp-content/uploads/2022/05/logo.svg"
+                <a href="/" title="Montro">
+                  <StaticImage
+                    src="../images/logo.svg"
                     alt="logo"
                     style={{ width: "200px", height: "70px" }}
                   />
@@ -126,9 +106,9 @@ const Header = ({ siteTitle }) => {
             </div>
 
             <div className="pull-right upper-right clearfix">
-              {data.map((item, i) => {
+              {data.allHeaderContactInformationJson.nodes.map((item, i) => {
                 return (
-                  <div className="upper-column info-box" key={i}>
+                  <div className="upper-column info-box" key={"ib" + i}>
                     <div className="icon-box">
                       <span className={item.icon}></span>
                     </div>
@@ -181,14 +161,17 @@ const Header = ({ siteTitle }) => {
                   id="navbarSupportedContent"
                 >
                   <ul className="navigation clearfix">
-                    {item_menu.map((item, i) => {
+                    {data.allHeaderMenuJson.nodes.map((item, i) => {
                       let submenu = ""
                       let inputProps = {
                         href: item.href,
                       }
                       let classes =
                         "menu-item menu-item-type-custom menu-item-object-custom"
-                      if (item.hasOwnProperty("subitems")) {
+                      if (
+                        item.hasOwnProperty("subitems") &&
+                        item.subitems != null
+                      ) {
                         classes = classes + " dropdown"
                         inputProps = {
                           "data-toggle": "dropdown1",
@@ -200,7 +183,10 @@ const Header = ({ siteTitle }) => {
 
                         let submenu_items = item.subitems.map((subitem, i) => {
                           return (
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page ">
+                            <li
+                              className="menu-item menu-item-type-post_type menu-item-object-page "
+                              key={"si" + i}
+                            >
                               <a
                                 title={subitem.name}
                                 href="https://themerange.net/wp/montro/services/"
@@ -217,7 +203,7 @@ const Header = ({ siteTitle }) => {
                         )
                       }
                       return (
-                        <li className={classes} key={item.name}>
+                        <li className={classes} key={"im" + item.name}>
                           <a title={item.name} {...inputProps}>
                             {item.name}
                           </a>
@@ -243,8 +229,8 @@ const Header = ({ siteTitle }) => {
           {/* <!--Logo--> */}
           <div className="logo pull-left">
             <a href="https://themerange.net/wp/montro/" title="Montro">
-              <img
-                src="https://themerange.net/wp/montro/wp-content/uploads/2022/05/logo-small.svg"
+              <StaticImage
+                src="../images/logo-small.svg"
                 alt="logo"
                 style={{ width: "135px", height: "50px" }}
               />
@@ -286,8 +272,8 @@ const Header = ({ siteTitle }) => {
         <nav className="menu-box">
           <div className="nav-logo">
             <a href="https://themerange.net/wp/montro/" title="Montro">
-              <img
-                src="https://themerange.net/wp/montro/wp-content/uploads/2022/05/logo.svg"
+              <StaticImage
+                src="../images/logo.svg"
                 alt="logo"
                 style={{ width: "200px", height: "70px" }}
               />

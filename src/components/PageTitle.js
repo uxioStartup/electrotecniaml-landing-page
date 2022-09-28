@@ -3,14 +3,11 @@ import * as React from "react"
 const PageTitle = ({ bradcrumb, title }) => (
   <>
     {/* <!-- Page Title --> */}
-    <section
-      className="page-title"
-      style={{ backgroundImage: "url(../wp-content/uploads/2022/05/7.jpg)" }}
-    >
+    <section className="page-title">
       <div className="auto-container">
         <ul className="page-breadcrumb">
           <li>
-            <a href="../index.html">Inicio</a>
+            <a href="/">Inicio</a>
           </li>
           <li>{title}</li>
         </ul>

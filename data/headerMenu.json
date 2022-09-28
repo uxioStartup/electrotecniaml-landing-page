@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Inicio",
+    "href": "/"
+  },
+  {
+    "name": "Productos",
+    "href": "productos",
+    "subitems": [
+      {
+        "name": "Hormigón elaborado"
+      },
+      {
+        "name": "Áridos"
+      },
+      {
+        "name": "Planta móvil de elaboración \"On Site\""
+      }
+    ]
+  },
+  {
+    "name": "Servicios",
+    "href": "servicios",
+    "subitems": [
+      {
+        "name": "Servicio de bombeo"
+      },
+      {
+        "name": "Asesoramiento online"
+      },
+      {
+        "name": "Atención personalizada"
+      }
+    ]
+  },
+  {
+    "name": "Contacto",
+    "href": "contacto"
+  }
+]

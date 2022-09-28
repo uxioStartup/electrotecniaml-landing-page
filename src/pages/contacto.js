@@ -1,27 +1,13 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import { graphql } from "gatsby"
 
 import CallToActionBtn from "../components/CallToActionBtn"
+import PageTitle from "../components/PageTitle"
 
-const ContactPage = () => (
+const ContactPage = ({ data }) => (
   <Layout>
-    {/* <!-- Page Title --> */}
-    <section
-      className="page-title"
-      style={{ backgroundImage: "url(../wp-content/uploads/2022/05/7.jpg)" }}
-    >
-      <div className="auto-container">
-        <ul className="page-breadcrumb">
-          <li>
-            <a href="../index.html">Inicio</a>
-          </li>
-          <li>Contacto</li>
-        </ul>
-        <h2> Contacto</h2>
-      </div>
-    </section>
-    {/* <!-- End Page Title --> */}
-
+    <PageTitle title="Contacto" />
     <section
       className="elementor-section elementor-top-section elementor-element  elementor-section-full_width elementor-section-height-default elementor-section-height-default"
       data-element_type="section"
@@ -50,9 +36,10 @@ const ContactPage = () => (
                           {/* <!-- Sec Title --> */}
                           <div className="sec-title">
                             <div className="title">
-                              <span className="separator"></span>Contact Now
+                              <span className="separator"></span>
+                              {data.allPagesJson.nodes[0].block1.category}
                             </div>
-                            <h2>Get in touch</h2>
+                            <h2>{data.allPagesJson.nodes[0].block1.title}</h2>
                           </div>
 
                           {/* <!-- Default Form --> */}
@@ -84,32 +71,24 @@ const ContactPage = () => (
                           {/* <!-- Sec Title --> */}
                           <div className="sec-title">
                             <div className="title">
-                              <span className="separator"></span>Our Info
+                              <span className="separator"></span>
+                              {data.allPagesJson.nodes[0].block2.category}
                             </div>
-                            <h2>Contact Information</h2>
+                            <h2>{data.allPagesJson.nodes[0].block2.title}</h2>
                           </div>
 
                           <ul className="contact-info">
-                            <li>
-                              <span className="icon flaticon-telephone"></span>
-                              <strong>Phone :</strong>
-                              <a href="tel:">+9 (000) 999-9999</a>
-                            </li>
-
-                            <li>
-                              <span className="icon flaticon-email-4"></span>
-                              <strong>Email :</strong>
-                              <a href="mailto:info@themerange.net">
-                                info@themerange.net
-                              </a>
-                            </li>
-
-                            <li>
-                              <span className="icon flaticon-maps-and-flags"></span>
-                              <strong>Address :</strong>
-                              Portfolio Technology 14, Capetown <br /> 12 Road,
-                              Chicago, 9999, USA
-                            </li>
+                            {data.allPagesJson.nodes[0].contactInformation.map(
+                              (item, i) => {
+                                return (
+                                  <li key={"ci" + i}>
+                                    <span className={item.icon}></span>
+                                    <strong>{item.title}</strong>
+                                    {item.data}
+                                  </li>
+                                )
+                              }
+                            )}
                           </ul>
                         </div>
                       </div>
@@ -125,5 +104,28 @@ const ContactPage = () => (
     </section>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    allPagesJson(filter: { idPage: { eq: "contacto" } }) {
+      nodes {
+        idPage
+        contactInformation {
+          data
+          icon
+          title
+        }
+        block1 {
+          category
+          title
+        }
+        block2 {
+          category
+          title
+        }
+      }
+    }
+  }
+`
 
 export default ContactPage

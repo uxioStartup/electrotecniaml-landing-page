@@ -1,0 +1,27 @@
+[
+  {
+    "idPage": "index",
+    "content": {
+      "category": "Genral Contracting",
+      "title": "Build Everything You Needs",
+      "description": "Build a Better Way Delivering Projects in Ways that Can't be Duplicated"
+    }
+  },
+  {
+    "idPage": "contacto",
+    "block1": { "category": "Contact Now", "title": "Get in touch" },
+    "block2": { "category": "Our Info", "title": "Contact Information" },
+    "contactInformation": [
+      {
+        "title": "Phone :",
+        "icon": "icon flaticon-telephone",
+        "data": "(<a href='tel:'>+9 (000) 999-9999</a>)"
+      },
+      {
+        "title": "Email :",
+        "icon": "icon flaticon-email-4",
+        "data": "(<a href='mailto:info@themerange.net'> info@themerange.net </a>)"
+      }
+    ]
+  }
+]

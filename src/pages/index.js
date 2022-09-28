@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
 import Layout from "../components/layout"
-
+import { graphql } from "gatsby"
 import $ from "jquery"
 import OwlCarousel from "react-owl-carousel"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   useEffect(() => {
     //Main Slider Carousel
     if ($(".main-slider-carousel").length) {
@@ -77,29 +77,31 @@ const IndexPage = () => {
                     {/* <!-- Main Slider Section --> */}
                     <section className="main-slider">
                       <div className="main-slider-carousel ">
-                        <div
-                          className="slide slide-tonmix"
-                          style={{ backgroundColor: "red" }}
-                        >
+                        <div className="slide slide-tonmix">
                           <div className="auto-container">
                             <div className="row clearfix">
                               {/* <!-- Content Column --> */}
                               <div className="content-column col-lg-7 cl-md-12 col-sm-12">
                                 <div className="inner-column">
                                   <div className="title">
-                                    Genral Contracting
+                                    {
+                                      data.allPagesJson.nodes[0].content
+                                        .category
+                                    }
                                   </div>
                                   <h1>
-                                    Build Everything <br /> You Needs
+                                    {data.allPagesJson.nodes[0].content.title}
                                   </h1>
                                   <div className="text">
-                                    Build a Better Way Delivering Projects in
-                                    Ways <br /> that Can't be Duplicated
+                                    {
+                                      data.allPagesJson.nodes[0].content
+                                        .description
+                                    }
                                   </div>
                                   <div className="clearfix">
                                     <div className="btns-box">
                                       <a
-                                        href="https://themerange.net/wp/montro/about-us/"
+                                        href="#"
                                         className="btn-style-three theme-btn"
                                       >
                                         <span className="txt">Read More</span>
@@ -108,14 +110,14 @@ const IndexPage = () => {
 
                                     <div className="play-box">
                                       <a
-                                        href="https://www.youtube.com/watch?v=kxPCFljwJws"
+                                        href="#"
                                         className="lightbox-video play-button"
                                       >
                                         <span className="flaticon-play-arrow">
                                           <i className="ripple"></i>
                                         </span>
                                       </a>
-                                      See Our Achivity{" "}
+                                      See Our Achivity
                                     </div>
                                   </div>
                                 </div>
@@ -204,5 +206,20 @@ if (urlFields) {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allPagesJson(filter: { idPage: { eq: "index" } }) {
+      nodes {
+        idPage
+        content {
+          category
+          description
+          title
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

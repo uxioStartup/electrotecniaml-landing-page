@@ -17,6 +17,7 @@ import BackToTop from "./BackToTop"
 
 import "../components/script"
 import "jquery-migrate"
+import WhatsappBtn from "./WhatsappBtn"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <WhatsappBtn />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="">
         <div className="page-wrapper   ">
