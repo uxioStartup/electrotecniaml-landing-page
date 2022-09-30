@@ -16,7 +16,7 @@ import Footer from "./footer"
 import BackToTop from "./BackToTop"
 
 import "../components/script"
-import "jquery-migrate"
+// import "jquery-migrate"
 import WhatsappBtn from "./WhatsappBtn"
 
 const Layout = ({ children }) => {

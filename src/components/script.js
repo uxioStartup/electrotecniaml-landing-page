@@ -1,6 +1,6 @@
-import "wowjs"
+// import "wowjs"
 
-import Swiper from "swiper"
+// import Swiper from "swiper"
 
 import $ from "jquery"
 
@@ -615,19 +615,19 @@ if (
   })
 }
 
-//Banner Carousel
-if ($(".banner-carousel").length) {
-  var swiper = new Swiper(".banner-carousel", {
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  })
-}
+// //Banner Carousel
+// if ($(".banner-carousel").length) {
+//   var swiper = new Swiper(".banner-carousel", {
+//     pagination: {
+//       el: ".swiper-pagination",
+//       type: "progressbar",
+//     },
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//   })
+// }
 
 //Gallery Filters
 if ($(".filter-list").length) {
@@ -635,18 +635,18 @@ if ($(".filter-list").length) {
 }
 
 // Elements Animation
-if ($(".wow").length) {
-  // var wow = new WOW(
-  //   {
-  // 	boxClass:     'wow',      // animated element css class (default is wow)
-  // 	animateClass: 'animated', // animation css class (default is animated)
-  // 	offset:       0,          // distance to the element when triggering the animation (default is 0)
-  // 	mobile:       true,       // trigger animations on mobile devices (default is true)
-  // 	live:         true       // act on asynchronously loaded content (default is true)
-  //   }
-  // );
-  // wow.init();
-}
+// if ($(".wow").length) {
+//   // var wow = new WOW(
+//   //   {
+//   // 	boxClass:     'wow',      // animated element css class (default is wow)
+//   // 	animateClass: 'animated', // animation css class (default is animated)
+//   // 	offset:       0,          // distance to the element when triggering the animation (default is 0)
+//   // 	mobile:       true,       // trigger animations on mobile devices (default is true)
+//   // 	live:         true       // act on asynchronously loaded content (default is true)
+//   //   }
+//   // );
+//   // wow.init();
+// }
 
 /* ==========================================================================
    When document is Scrollig, do

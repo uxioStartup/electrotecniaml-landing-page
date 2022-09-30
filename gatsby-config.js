@@ -14,6 +14,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    "gatsby-plugin-webpack-bundle-analyser-v2",
+    `gatsby-plugin-preact`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
