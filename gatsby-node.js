@@ -58,7 +58,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const productoTemplate = path.resolve(`src/templates/producto.js`)
 
   result.data.productos.subitems.forEach(node => {
-    const path = result.data.productos.href + "/" + node.href
+    const path = "/" + result.data.productos.href + "/" + node.href
     if (node.href != "")
       createPage({
         path,
@@ -74,7 +74,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const servicioTemplate = path.resolve(`src/templates/servicio.js`)
   result.data.servicios.subitems.forEach(node => {
-    const path = result.data.servicios.href + "/" + node.href
+    const path = "/" + result.data.servicios.href + "/" + node.href
     if (node.href != "")
       createPage({
         path,
