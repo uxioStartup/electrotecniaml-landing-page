@@ -14,7 +14,7 @@ const WhatsappBtn = ({ bradcrumb, title }) => (
         style={{ float: "right" }}
         href="https://api.whatsapp.com/send?phone=5491167341752&text=Hola!%20vi%20el%20sitio%20web%20y%20quisiera%20m&aacute;s%20informaci&oacute;n%20sobre%20ML%20Electricidad"
         target="_blank"
-        rel="norefferrer"
+        rel="noreferrer"
         role="button"
       >
         <StaticImage

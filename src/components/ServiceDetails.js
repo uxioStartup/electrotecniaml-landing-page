@@ -86,7 +86,7 @@ const ServiceDetails = () => (
                 <div className="image">
                   <img
                     src="../../wp-content/uploads/2022/05/service-7.jpg"
-                    alt="Awesome Image"
+                    alt="Awesome"
                   />
                 </div>
                 <div className="lower-content">

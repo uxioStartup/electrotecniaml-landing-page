@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 
 const PageTitle = ({ bradcrumb, title }) => (
   <>
@@ -7,7 +8,7 @@ const PageTitle = ({ bradcrumb, title }) => (
       <div className="auto-container">
         <ul className="page-breadcrumb">
           <li>
-            <a href="/">Inicio</a>
+            <Link to="/">Inicio</Link>
           </li>
           <li>{title}</li>
         </ul>

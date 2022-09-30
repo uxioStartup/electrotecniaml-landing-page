@@ -23,6 +23,7 @@ const Header = ({}) => {
           name
           subitems {
             name
+            href
           }
         }
       }
@@ -95,13 +96,13 @@ const Header = ({}) => {
             {/* <!-- Logo Box --> */}
             <div className="pull-left logo-box">
               <div className="logo">
-                <a href="/" title="Montro">
+                <Link to="/" title="Montro">
                   <StaticImage
                     src="../images/logo.svg"
                     alt="logo"
                     style={{ width: "200px", height: "70px" }}
                   />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -164,7 +165,7 @@ const Header = ({}) => {
                     {data.allHeaderMenuJson.nodes.map((item, i) => {
                       let submenu = ""
                       let inputProps = {
-                        href: item.href,
+                        to: "/" + item.href,
                       }
                       let classes =
                         "menu-item menu-item-type-custom menu-item-object-custom"
@@ -187,12 +188,12 @@ const Header = ({}) => {
                               className="menu-item menu-item-type-post_type menu-item-object-page "
                               key={"si" + i}
                             >
-                              <a
+                              <Link
                                 title={subitem.name}
-                                href="https://themerange.net/wp/montro/services/"
+                                to={"/" + item.href + "/" + subitem.href}
                               >
                                 {subitem.name}
-                              </a>
+                              </Link>
                             </li>
                           )
                         })
@@ -204,9 +205,9 @@ const Header = ({}) => {
                       }
                       return (
                         <li className={classes} key={"im" + item.name}>
-                          <a title={item.name} {...inputProps}>
+                          <Link title={item.name} {...inputProps}>
                             {item.name}
-                          </a>
+                          </Link>
                           {submenu}
                         </li>
                       )
