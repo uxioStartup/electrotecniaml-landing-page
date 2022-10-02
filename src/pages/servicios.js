@@ -15,14 +15,12 @@ const ServicesPage = ({ data }) => (
     >
       <div className="elementor-container elementor-column-gap-default">
         <div
-          className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b2fda96"
-          data-id="b2fda96"
+          className="elementor-column elementor-col-100 elementor-top-column elementor-element "
           data-element_type="column"
         >
           <div className="elementor-widget-wrap elementor-element-populated">
             <div
-              className="elementor-element elementor-element-3e5e798 elementor-widget elementor-widget-montro_services_v4"
-              data-id="3e5e798"
+              className="elementor-element  elementor-widget elementor-widget-montro_services_v4"
               data-element_type="widget"
               data-widget_type="montro_services_v4.default"
             >

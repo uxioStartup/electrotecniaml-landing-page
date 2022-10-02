@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import $ from "jquery"
 import CallToActionBtn from "./CallToActionBtn"
 
-const Header = ({}) => {
+const Header = () => {
   let data = useStaticQuery(graphql`
     query {
       allHeaderContactInformationJson {
@@ -31,32 +31,65 @@ const Header = ({}) => {
   `)
 
   useEffect(() => {
-    //Mobile Nav Hide Show
-    if ($(".mobile-menu-two").length) {
-      var mobileMenuContent = $(".header-style-four .navigation").html()
-      $(".mobile-menu-two .navigation").append(mobileMenuContent)
-      $(".sticky-header").append(mobileMenuContent)
-      $(".mobile-menu-two .close-btn").on("click", function () {
-        $("body").removeClass("mobile-menu-visible")
-      })
+    //Update Header Style and Scroll to Top
+    function headerStyle() {
+      if ($(".main-header").length) {
+        var windowpos = $(window).scrollTop()
+        var siteHeader = $(".main-header")
+        var scrollLink = $(".scroll-to-top")
+
+        var HeaderHight = $(".main-header").height()
+        if (windowpos >= HeaderHight) {
+          siteHeader.addClass("fixed-header")
+          scrollLink.fadeIn(300)
+        } else {
+          siteHeader.removeClass("fixed-header")
+          scrollLink.fadeOut(300)
+        }
+      }
+
+      if ($(".header-style-four").length) {
+        var windowpos = $(window).scrollTop()
+        var siteHeader = $(".header-style-four")
+        var headerHeight = $(".header-style-four").height()
+        //alert(headerHeight);
+        var scrollLink = $(".scroll-to-top")
+        if (windowpos >= headerHeight) {
+          siteHeader.addClass("fixed-header")
+          scrollLink.fadeIn(300)
+        } else {
+          siteHeader.removeClass("fixed-header")
+          scrollLink.fadeOut(300)
+        }
+      }
+    }
+
+    headerStyle()
+    //Submenu Dropdown Toggle
+    if ($(".main-header .navigation li.dropdown").length) {
+      $(".main-header .navigation li.dropdown").append(
+        '<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>'
+      )
 
       //Dropdown Button
-      $(".mobile-menu-two li.dropdown .dropdown-btn").on("click", function () {
+      $(".main-header li.dropdown .dropdown-btn").on("click", function () {
         $(this).prev("ul").slideToggle(500)
       })
 
-      //Menu Toggle Btn
-      $(".mobile-nav-toggler").on("click", function () {
-        $("body").addClass("mobile-menu-visible")
-      })
-
-      //Menu Toggle Btn
-      $(".mobile-menu-two .menu-backdrop,.mobile-menu .close-btn").on(
+      //Megamenu Toggle
+      $(".main-header .main-menu li.dropdown .dropdown-btn").on(
         "click",
         function () {
-          $("body").removeClass("mobile-menu-visible")
+          $(this).prev(".mega-menu").slideToggle(500)
         }
       )
+
+      //Disable dropdown parent link
+      $(
+        ".main-header .navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a"
+      ).on("click", function (e) {
+        e.preventDefault()
+      })
     }
 
     //Mobile Nav Hide Show
@@ -85,6 +118,10 @@ const Header = ({}) => {
         }
       )
     }
+
+    $(window).on("scroll", function () {
+      headerStyle()
+    })
   })
 
   return (
@@ -231,13 +268,13 @@ const Header = ({}) => {
         <div className="auto-container clearfix">
           {/* <!--Logo--> */}
           <div className="logo pull-left">
-            <a href="https://themerange.net/wp/montro/" title="Montro">
+            <Link to="/" title="Montro">
               <StaticImage
                 src="../images/logo-small.svg"
                 alt="logo"
                 style={{ width: "135px", height: "50px" }}
               />
-            </a>{" "}
+            </Link>
           </div>
           {/* <!--Right Col--> */}
           <div className="pull-right">
@@ -274,13 +311,13 @@ const Header = ({}) => {
 
         <nav className="menu-box">
           <div className="nav-logo">
-            <a href="https://themerange.net/wp/montro/" title="Montro">
+            <Link to="/" title="Montro">
               <StaticImage
                 src="../images/logo.svg"
                 alt="logo"
                 style={{ width: "200px", height: "70px" }}
               />
-            </a>
+            </Link>
           </div>
           <div className="menu-outer">
             {/* <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> */}

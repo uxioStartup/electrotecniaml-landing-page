@@ -34,35 +34,6 @@ const ServiceDetails = ({ sidebar, title }) => (
                   </div>
                 </div>
               </div>
-              <div
-                id="montro_add_banner-2"
-                className="sidebar-widget service-sidebar widget_montro_add_banner"
-              >
-                <div className="widget-content">
-                  {/* <!-- Banner Widget --> */}
-                  <div
-                    className="banner-widget"
-                    style={{
-                      backgroundImage:
-                        "url(../../wp-content/themes/montro/assets/images/resource/banner-widget.jpg)",
-                    }}
-                  >
-                    <div className="inner-box">
-                      <div className="title">Add Your Banner</div>
-                      <h3>
-                        How to Increase <br /> Your Profit in
-                      </h3>
-
-                      <a
-                        href="../../contact-us-01/index.html"
-                        className="btn-style-six theme-btn"
-                      >
-                        <span className="txt">Read More</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </aside>
           </div>
 
