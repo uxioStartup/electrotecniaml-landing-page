@@ -7,19 +7,17 @@ const ServiceBlock = ({ image, text, title, icon }) => {
       {/* <!-- Service Block Two --> */}
       <div className="service-block-two col-lg-4 col-md-6 col-sm-12">
         <div className="inner-box">
-          <div className="image">
-            <GatsbyImage image={getImage(image)} alt="" />
-            <div className="overlay-box">
-              <div className="overlay-inner">
-                <div className="content">
-                  <div className="text">{text}</div>
-                  <a
-                    href="general-contracting/index.html"
-                    className="read-more theme-btn"
-                  >
-                    Read More
-                  </a>
-                </div>
+          <GatsbyImage image={getImage(image)} alt="" />
+          <div className="overlay-box">
+            <div className="overlay-inner">
+              <div className="content">
+                <div className="text">{text}</div>
+                <a
+                  href="general-contracting/index.html"
+                  className="read-more theme-btn"
+                >
+                  Read More
+                </a>
               </div>
             </div>
           </div>
