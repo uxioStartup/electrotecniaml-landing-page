@@ -1,6 +1,8 @@
 import * as React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-const ServiceDetails = () => (
+const ServiceDetails = ({ sidebar, title }) => (
   <>
     {/* <!-- Sidebar Page Container --> */}
     <div className="sidebar-page-container">
@@ -19,30 +21,15 @@ const ServiceDetails = () => (
                   </div>
                   <div className="menu-services-menu-container">
                     <ul id="menu-services-menu" className="menu">
-                      <li
-                        id="menu-item-1753"
-                        className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1723 current_page_item menu-item-1753"
-                      >
-                        <a href="index.html" aria-current="page">
-                          General Contracting
-                        </a>
-                      </li>
-                      <li
-                        id="menu-item-1754"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1754"
-                      >
-                        <a href="../apartment-design/index.html">
-                          Apartment Design
-                        </a>
-                      </li>
-                      <li
-                        id="menu-item-1755"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755"
-                      >
-                        <a href="../metrial-management/index.html">
-                          Metrial Management
-                        </a>
-                      </li>
+                      {sidebar.map(item => {
+                        return (
+                          <li className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item  current_page_item ">
+                            <Link to={"../" + item.href} aria-current="page">
+                              {item.name}
+                            </Link>
+                          </li>
+                        )
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -63,7 +50,7 @@ const ServiceDetails = () => (
                     <div className="inner-box">
                       <div className="title">Add Your Banner</div>
                       <h3>
-                        How to Increase <br /> Your Profit in{" "}
+                        How to Increase <br /> Your Profit in
                       </h3>
 
                       <a
@@ -75,7 +62,7 @@ const ServiceDetails = () => (
                     </div>
                   </div>
                 </div>
-              </div>{" "}
+              </div>
             </aside>
           </div>
 
@@ -84,13 +71,13 @@ const ServiceDetails = () => (
             <div className="service-detail">
               <div className="inner-box">
                 <div className="image">
-                  <img
-                    src="../../wp-content/uploads/2022/05/service-7.jpg"
+                  <StaticImage
+                    src="../images/content/service-7.jpg"
                     alt="Awesome"
                   />
                 </div>
                 <div className="lower-content">
-                  <h3>Automotive parts and system build</h3>
+                  <h3>{title}</h3>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
@@ -130,8 +117,8 @@ const ServiceDetails = () => (
                     <div className="row clearfix">
                       <div className="image-column col-lg-6 col-md-6 col-sm-12">
                         <div className="image">
-                          <img
-                            src="../../wp-content/uploads/2022/05/service-9.jpg"
+                          <StaticImage
+                            src="../images/content/service-9.jpg"
                             alt="Signature"
                           />
                         </div>
@@ -149,7 +136,7 @@ const ServiceDetails = () => (
                           Lorem Ipsum has been industry's standard dummy text
                           ever since the 1500s Lorem Ipsum is simply dummy text
                           of the printing.
-                        </p>{" "}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -199,7 +186,7 @@ const ServiceDetails = () => (
                                 Lorem Ipsum has been industry's standard dummy
                                 text ever since the 1500s Lorem Ipsum is simply
                                 dummy text of the printing.
-                              </p>{" "}
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -219,7 +206,7 @@ const ServiceDetails = () => (
                                 Lorem Ipsum has been industry's standard dummy
                                 text ever since the 1500s Lorem Ipsum is simply
                                 dummy text of the printing.
-                              </p>{" "}
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -239,7 +226,7 @@ const ServiceDetails = () => (
                                 Lorem Ipsum has been industry's standard dummy
                                 text ever since the 1500s Lorem Ipsum is simply
                                 dummy text of the printing.
-                              </p>{" "}
+                              </p>
                             </div>
                           </div>
                         </div>

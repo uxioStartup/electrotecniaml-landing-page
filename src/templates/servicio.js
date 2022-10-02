@@ -6,12 +6,12 @@ import PageTitle from "../components/PageTitle"
 import ServiceDetails from "../components/ServiceDetails"
 
 const ServiceTemplate = ({ data, pageContext }) => {
-  const { product, idPage } = pageContext
+  const { product, idPage, products } = pageContext
   console.log(idPage)
   return (
     <Layout>
       <PageTitle title={product.name} />
-      <ServiceDetails />
+      <ServiceDetails sidebar={products} title={product.name} />
     </Layout>
   )
 }

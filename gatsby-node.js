@@ -68,6 +68,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         context: {
           idPage: path,
           product: node,
+          products: result.data.productos.subitems,
         },
       })
   })
@@ -84,6 +85,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         context: {
           idPage: path,
           product: node,
+          products: result.data.servicios.subitems,
         },
       })
   })

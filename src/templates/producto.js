@@ -6,13 +6,14 @@ import PageTitle from "../components/PageTitle"
 import ServiceDetails from "../components/ServiceDetails"
 
 const ProductTemplate = ({ data, pageContext }) => {
-  const { product, idPage } = pageContext
-  console.log(idPage)
-  console.log(idPage)
+  const { product, idPage, products } = pageContext
   return (
     <Layout>
       <PageTitle title={data.allPagesJson.edges[0].node.content.title} />
-      <ServiceDetails />
+      <ServiceDetails
+        sidebar={products}
+        title={data.allPagesJson.edges[0].node.content.title}
+      />
     </Layout>
   )
 }
