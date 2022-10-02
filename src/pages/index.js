@@ -2,53 +2,17 @@ import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import $ from "jquery"
-import OwlCarousel from "react-owl-carousel"
 
 const IndexPage = ({ data }) => {
   useEffect(() => {
     //Main Slider Carousel
     if ($(".main-slider-carousel").length) {
-      console.log("entering carousel")
-      $(".main-slider-carousel").owlCarousel({
-        animateOut: "fadeOut",
-        animateIn: "fadeIn",
-        // loop: true,
-        margin: 0,
-        nav: true,
-        autoHeight: true,
-        smartSpeed: 500,
-        autoplay: 6000,
-        navText: [
-          '<span class="fa fa-angle-left"></span>',
-          '<span class="fa fa-angle-right"></span>',
-        ],
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 1,
-          },
-          800: {
-            items: 1,
-          },
-          1024: {
-            items: 1,
-          },
-          1200: {
-            items: 1,
-          },
-        },
-      })
+      $(".main-slider-carousel").addClass("active")
     }
   })
 
   return (
     <Layout>
-      {/* <link rel="alternate" type="application/rss+xml" title="Montro &raquo; Feed" href="https://themerange.net/wp/montro/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Montro &raquo; Comments Feed" href="https://themerange.net/wp/montro/comments/feed/" />
- */}
-
       {/* 
 <link rel='shortlink' href='https://themerange.net/wp/montro/' /> */}
       {/* <link rel="alternate" type="application/json+oembed" href="https://themerange.net/wp/montro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthemerange.net%2Fwp%2Fmontro%2F" />
@@ -76,7 +40,7 @@ const IndexPage = ({ data }) => {
                   <div className="elementor-widget-container">
                     {/* <!-- Main Slider Section --> */}
                     <section className="main-slider">
-                      <div className="main-slider-carousel ">
+                      <div className="main-slider-carousel  ">
                         <div className="slide slide-tonmix">
                           <div className="auto-container">
                             <div className="row clearfix">

@@ -29,7 +29,3 @@ import "./src/css/post-9.css"
 import "./src/css/frontend-lite.min.css"
 import "./src/css/flaticon.css"
 
-import "animate.css"
-import "swiper/css"
-
-import "owl.carousel/dist/assets/owl.carousel.css"

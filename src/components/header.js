@@ -34,27 +34,12 @@ const Header = () => {
     //Update Header Style and Scroll to Top
     function headerStyle() {
       if ($(".main-header").length) {
-        var windowpos = $(window).scrollTop()
+        let windowpos = $(window).scrollTop()
         var siteHeader = $(".main-header")
-        var scrollLink = $(".scroll-to-top")
+        let scrollLink = $(".scroll-to-top")
 
         var HeaderHight = $(".main-header").height()
         if (windowpos >= HeaderHight) {
-          siteHeader.addClass("fixed-header")
-          scrollLink.fadeIn(300)
-        } else {
-          siteHeader.removeClass("fixed-header")
-          scrollLink.fadeOut(300)
-        }
-      }
-
-      if ($(".header-style-four").length) {
-        var windowpos = $(window).scrollTop()
-        var siteHeader = $(".header-style-four")
-        var headerHeight = $(".header-style-four").height()
-        //alert(headerHeight);
-        var scrollLink = $(".scroll-to-top")
-        if (windowpos >= headerHeight) {
           siteHeader.addClass("fixed-header")
           scrollLink.fadeIn(300)
         } else {
@@ -68,7 +53,7 @@ const Header = () => {
     //Submenu Dropdown Toggle
     if ($(".main-header .navigation li.dropdown").length) {
       $(".main-header .navigation li.dropdown").append(
-        '<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>'
+        '<div className="dropdown-btn"><span className="fa fa-angle-down"></span></div>'
       )
 
       //Dropdown Button
