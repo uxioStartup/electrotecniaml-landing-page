@@ -15,12 +15,12 @@
       {
         "title": "Phone :",
         "icon": "icon flaticon-telephone",
-        "data": "(<a href='tel:'>+9 (000) 999-9999</a>)"
+        "data": "<a href='tel:'>+9 (000) 999-9999</a>"
       },
       {
         "title": "Email :",
         "icon": "icon flaticon-email-4",
-        "data": "(<a href='mailto:info@themerange.net'> info@themerange.net </a>)"
+        "data": "<a href='mailto:info@themerange.net'> info@themerange.net </a>"
       }
     ]
   },
@@ -71,6 +71,22 @@
       "category": "",
       "title": "Servicio bombeo",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing."
+    }
+  },
+  {
+    "idPage": "terminos-servicio",
+    "content": {
+      "category": "Genral Contracting",
+      "title": "Términos y condiciones del servicio",
+      "description": "Build a Better Way Delivering Projects in Ways that Can't be Duplicated"
+    }
+  },
+  {
+    "idPage": "politica-privacidad",
+    "content": {
+      "category": "Genral Contracting",
+      "title": "Política de privacidad",
+      "description": "Build a Better Way Delivering Projects in Ways that Can't be Duplicated"
     }
   }
 ]

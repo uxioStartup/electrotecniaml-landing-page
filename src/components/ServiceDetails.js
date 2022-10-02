@@ -70,12 +70,10 @@ const ServiceDetails = ({ sidebar, title }) => (
           <div className="content-side right-sidebar col-lg-8 col-md-12 col-sm-12">
             <div className="service-detail">
               <div className="inner-box">
-                <div className="image">
-                  <StaticImage
-                    src="../images/content/service-7.jpg"
-                    alt="Awesome"
-                  />
-                </div>
+                <StaticImage
+                  src="../images/content/service-7.jpg"
+                  alt="Awesome"
+                />
                 <div className="lower-content">
                   <h3>{title}</h3>
                   <p>
@@ -116,12 +114,10 @@ const ServiceDetails = ({ sidebar, title }) => (
                   <div className="two-column">
                     <div className="row clearfix">
                       <div className="image-column col-lg-6 col-md-6 col-sm-12">
-                        <div className="image">
-                          <StaticImage
-                            src="../images/content/service-9.jpg"
-                            alt="Signature"
-                          />
-                        </div>
+                        <StaticImage
+                          src="../images/content/service-9.jpg"
+                          alt="Signature"
+                        />
                       </div>
                       <div className="content-column col-lg-6 col-md-6 col-sm-12">
                         <h4>

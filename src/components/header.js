@@ -116,7 +116,9 @@ const Header = ({}) => {
                     <ul>
                       <li>{item.description}</li>
                       <li>
-                        <strong>{item.data}</strong>
+                        <strong
+                          dangerouslySetInnerHTML={{ __html: item.data }}
+                        ></strong>
                       </li>
                     </ul>
                   </div>

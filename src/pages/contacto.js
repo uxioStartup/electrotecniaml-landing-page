@@ -84,7 +84,11 @@ const ContactPage = ({ data }) => (
                                   <li key={"ci" + i}>
                                     <span className={item.icon}></span>
                                     <strong>{item.title}</strong>
-                                    {item.data}
+                                    <div
+                                      dangerouslySetInnerHTML={{
+                                        __html: item.data,
+                                      }}
+                                    ></div>
                                   </li>
                                 )
                               }

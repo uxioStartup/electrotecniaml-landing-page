@@ -44,6 +44,32 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             name
           }
         }
+
+        terminos: allPagesJson(
+          filter: { idPage: { eq: "terminos-servicio" } }
+        ) {
+          nodes {
+            idPage
+            content {
+              category
+              description
+              title
+            }
+          }
+        }
+
+        privacidad: allPagesJson(
+          filter: { idPage: { eq: "politica-privacidad" } }
+        ) {
+          nodes {
+            idPage
+            content {
+              category
+              description
+              title
+            }
+          }
+        }
       }
     `
   )
@@ -88,5 +114,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           products: result.data.servicios.subitems,
         },
       })
+  })
+
+  const pageTemplate = path.resolve(`src/templates/template.js`)
+
+  const pathTerminos = result.data.terminos.nodes[0].idPage
+
+  createPage({
+    path: pathTerminos,
+    component: pageTemplate,
+    // In your blog post template's graphql query, you can use pagePath
+    // as a GraphQL variable to query for data from the markdown file.
+    context: {
+      idPage: pathTerminos,
+      title: result.data.terminos.nodes[0].title,
+      description: result.data.terminos.nodes[0].description,
+    },
+  })
+
+  const pathPrivacidad = result.data.privacidad.nodes[0].idPage
+
+  createPage({
+    path: pathPrivacidad,
+    component: pageTemplate,
+    // In your blog post template's graphql query, you can use pagePath
+    // as a GraphQL variable to query for data from the markdown file.
+    context: {
+      idPage: pathPrivacidad,
+      title: result.data.privacidad.nodes[0].title,
+      description: result.data.privacidad.nodes[0].description,
+    },
   })
 }

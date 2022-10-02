@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 
 const FooterBottom = () => (
@@ -9,9 +10,8 @@ const FooterBottom = () => (
           {/* <!-- Column --> */}
           <div className="column col-lg-6 col-md-12 col-sm-12">
             <div className="copyright">
-              Copyright &copy; 2022{" "}
-              <a href="https://themerange.net/wp/montro">Montro</a> All rights
-              reserved.
+              Copyright 2022
+              <Link to="/">Montro</Link> All rights reserved.
             </div>
           </div>
 
@@ -19,47 +19,38 @@ const FooterBottom = () => (
           <div className="column col-lg-6 col-md-12 col-sm-12">
             {/* <!-- Menu Box --> */}
             <ul className="social-box">
-              <li
-                id="menu-item-1901"
-                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1901"
-              >
-                <a
-                  title="Terms &#038; Condition"
-                  href="https://themerange.net/wp/montro/terms-condition/"
+              <li className="menu-item menu-item-type-post_type menu-item-object-page ">
+                <Link
+                  title="Términos y condiciones del servicio"
+                  to="/terminos-servicio"
                   className="hvr-underline-from-left1"
                   data-scroll
                   data-options="easing: easeOutQuart"
                 >
-                  Terms &#038; Condition
-                </a>
+                  Términos y condiciones del servicio
+                </Link>
               </li>
-              <li
-                id="menu-item-1902"
-                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1902"
-              >
-                <a
-                  title="Privacy &#038; Policy"
-                  href="https://themerange.net/wp/montro/privacy-policy/"
+              <li className="menu-item menu-item-type-post_type menu-item-object-page ">
+                <Link
+                  title="Política de privacidad"
+                  to="/politica-privacidad"
                   className="hvr-underline-from-left1"
                   data-scroll
                   data-options="easing: easeOutQuart"
                 >
-                  Privacy &#038; Policy
-                </a>
+                  Política de privacidad
+                </Link>
               </li>
-              <li
-                id="menu-item-1903"
-                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1903"
-              >
-                <a
-                  title="Contact Us"
-                  href="https://themerange.net/wp/montro/contact-us-01/"
+              <li className="menu-item menu-item-type-post_type menu-item-object-page ">
+                <Link
+                  title="Contacto"
+                  to="/contacto"
                   className="hvr-underline-from-left1"
                   data-scroll
                   data-options="easing: easeOutQuart"
                 >
-                  Contact Us
-                </a>
+                  Contacto
+                </Link>
               </li>
             </ul>
           </div>
