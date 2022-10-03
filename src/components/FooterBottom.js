@@ -11,7 +11,7 @@ const FooterBottom = () => (
           <div className="column col-lg-6 col-md-12 col-sm-12">
             <div className="copyright">
               Copyright 2022
-              <Link to="/">Montro</Link> All rights reserved.
+              <Link to="/"> Montro</Link> Todos los derechos reservados.
             </div>
           </div>
 

@@ -8,6 +8,7 @@ const PageTemplate = ({ pageContext }) => {
   return (
     <Layout>
       <PageTitle title={title} />
+      <div>{description}</div>
     </Layout>
   )
 }

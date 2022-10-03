@@ -28,4 +28,3 @@ import "./src/css/post-9.css"
 //  import "./src/css/elementor-icons.min.css"
 import "./src/css/frontend-lite.min.css"
 import "./src/css/flaticon.css"
-
