@@ -27,10 +27,10 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-215f3db062c67eb29e3a.js"
+    "url": "webpack-runtime-c009cefc1af93ab8b08b.js"
   },
   {
-    "url": "styles.c0dfb12956ea61858460.css"
+    "url": "styles.902330a25b55e1e62b13.css"
   },
   {
     "url": "framework-e8ac98045450190241c6.js"
@@ -39,18 +39,14 @@ self.__precacheManifest = [
     "url": "dc6a8720040df98778fe970bf6c000a41750d3ae-1cad979249befd4ba68e.js"
   },
   {
-    "url": "app-96a6d499cbb6f969aa35.js"
+    "url": "app-5517aec1d133003cc31d.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "7a7fab3329baba03956143a254e8cca7"
+    "revision": "1b6858c131933aeb2e3ebbd658286e75"
   },
   {
     "url": "polyfill-f233c71a685f1f7db514.js"
-  },
-  {
-    "url": "manifest.webmanifest",
-    "revision": "1777925eb310e16d062b8cf423464e8e"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -160,7 +156,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/electrotecniaml-landing-page/app-96a6d499cbb6f969aa35.js`))) {
+  if (!resources || !(await caches.match(`/electrotecniaml-landing-page/app-5517aec1d133003cc31d.js`))) {
     return await fetch(event.request)
   }
 
