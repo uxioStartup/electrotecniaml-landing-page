@@ -27,10 +27,10 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c009cefc1af93ab8b08b.js"
+    "url": "webpack-runtime-3457aaf5be885ae21700.js"
   },
   {
-    "url": "styles.902330a25b55e1e62b13.css"
+    "url": "styles.1ff062e4eb7ea6a910a8.css"
   },
   {
     "url": "framework-e8ac98045450190241c6.js"
@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "dc6a8720040df98778fe970bf6c000a41750d3ae-1cad979249befd4ba68e.js"
   },
   {
-    "url": "app-5517aec1d133003cc31d.js"
+    "url": "app-6ee7ccb200366537324f.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "1b6858c131933aeb2e3ebbd658286e75"
+    "revision": "612f35b66b633327f16f6cbfc567a4c4"
   },
   {
     "url": "polyfill-f233c71a685f1f7db514.js"
@@ -156,7 +156,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/electrotecniaml-landing-page/app-5517aec1d133003cc31d.js`))) {
+  if (!resources || !(await caches.match(`/electrotecniaml-landing-page/app-6ee7ccb200366537324f.js`))) {
     return await fetch(event.request)
   }
 
