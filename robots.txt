@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://uxiostartup.github.io/electrotecniaml-landing-page/sitemap-index.xml
+Host: https://uxiostartup.github.io
